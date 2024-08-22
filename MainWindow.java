@@ -2,6 +2,9 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class MainWindow extends JFrameWindow {
 
@@ -29,6 +32,16 @@ public class MainWindow extends JFrameWindow {
 
         // Füge das Panel zum Fenster hinzu
         getContentPane().add(panel);
+
+                // Füge ActionListener zum Close-Button hinzu
+        closeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Beende die Anwendung
+                System.exit(0);
+            }
+        });
+
     }
 
     
